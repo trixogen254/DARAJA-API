@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TRON INTERNET</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>TRON INTERNET</h1>
+    <h2>Register</h2>
+    <form action="auth.php" method="POST">
+        Phone Number: <input type="text" name="phone_number" required>
+        <input type="submit" name="register" value="Register">
+    </form>
+    
+    <h2>Login</h2>
+    <form action="auth.php" method="POST">
+        Username: <input type="text" name="username" required>
+        Phone Number: <input type="text" name="phone_number" required>
+        <input type="submit" name="login" value="Login">
+    </form>
+
+    <div class="feedback">
+        <?php if (isset($feedback)) echo $feedback; ?>
+    </div>
+    
+</body>
+</html>

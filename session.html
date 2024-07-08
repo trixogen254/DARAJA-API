@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TRON INTERNET Session</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Manage Sessions</h1>
+    <h2>Start Session</h2>
+    <form action="session.php" method="POST">
+        User ID: <input type="text" name="user_id" required>
+        Package ID: <input type="text" name="package_id" required>
+        <input type="submit" name="start_session" value="Start Session">
+    </form>
+    
+    <h2>End Session</h2>
+    <form action="session.php" method="POST">
+        Session ID: <input type="text" name="session_id" required>
+        <input type="submit" name="end_session" value="End Session">
+    </form>
+
+    <div class="feedback">
+        <?php if (isset($feedback)) echo $feedback; ?>
+    </div>
+</body>
+</html>
